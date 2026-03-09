@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Image from '@/components/Image'
+import Section from '@/components/Section'
 import S from './style.module.css'
 
 export default function App() {
@@ -12,6 +13,10 @@ export default function App() {
           컴포넌트 디자인
         </h2>
       </Header>
+
+      <Section title="리엑트는 리엑션(반응)!" isShowTitle>
+        <p>리엑트는 사용자의 행동에 따라 리엑션을 제공한다.</p>
+      </Section>
 
       <div data-placeholder />
 
