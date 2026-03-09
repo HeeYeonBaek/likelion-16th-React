@@ -1,5 +1,5 @@
 import { Footer, Header, Image, Wrapper } from '@/components'
-import { ConditionalRendering } from '@/learns'
+import { ComponentState } from '@/learns'
 import S from './style.module.css'
 
 export default function App() {
@@ -12,11 +12,11 @@ export default function App() {
         </h2>
       </Header>
 
-      <Wrapper>
-        <ConditionalRendering />
-      </Wrapper>
-
-      {/* <div data-placeholder /> */}
+      <div data-placeholder>
+        <Wrapper>
+          <ComponentState />
+        </Wrapper>
+      </div>
 
       <Footer slogan={'모든 이들에게 행복을!'} />
     </div>

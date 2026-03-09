@@ -7,7 +7,6 @@ interface SectionProps {
 }
 
 function Section(props: SectionProps) {
-  console.log(props)
   /**
    * 컴포넌트 title, children 속성
    * ✅ 컴포넌트 타입 정의 (인라인 → 인터페이스)

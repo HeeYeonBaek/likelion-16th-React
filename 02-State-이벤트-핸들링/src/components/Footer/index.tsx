@@ -46,10 +46,3 @@ export default function Footer(props: FooterProps) {
     </footer>
   )
 }
-
-function look(what?: string) {
-  return `${what ?? '백두산'}을 보다`
-}
-
-look() // '백두산을 보다'
-look('한라산') // '한라산을 보다'

@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import S from './style.module.css'
 
 interface ButtonProps {
-  type?: 'submit' | 'reset' | 'button' 
+  type?: 'submit' | 'reset' | 'button'
   children: ReactNode
   isDisabled?: boolean
   onNoti?: () => void /* return undefined */
@@ -12,7 +12,7 @@ function Button({
   type = 'button',
   isDisabled = false,
   onNoti,
-  children
+  children,
 }: ButtonProps) {
   /**
    * 컴포넌트 속성(Props) 설계
@@ -24,24 +24,21 @@ function Button({
   // const { children } = props
   // const isDisabled = false
 
-
-
   const handleClick = () => {
-    // 특정 조건이 참이 되면 함수를 종료
+    // 특정 조건이 참이되면 함수를 종료
     if (isDisabled) return
-    
+
     console.log('clicked button')
     // 옵셔널 체이닝 (Optional Chaining)
-    // onNoti가 함수 타입이야? 함수 타입이면 실행해!
-    // 함수 타입 아니면 아무 것도 하지마!
-    
+    // - onNoti가 함수 타입이야? 함수 타입이면 실행해!
+    // - 함수 타입아니면 아무 것도 하지마!
     onNoti?.()
 
     // 위 코드와 아래 코드는 동일하게 작동
     // if (typeof onNoti === 'function') {
     //   onNoti()
     // }
- }
+  }
 
   return (
     <button
