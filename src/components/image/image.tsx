@@ -1,14 +1,20 @@
-import styles from './Image.module.css'
+interface ImageProps {
+  alt: string
+  src: string
+  width: number
+  height: number
+}
 
-export default function Image() {
-  const size = 120
+function Image(props: ImageProps) {
   return (
     <img
-      className={styles.image}
-      src="/react.svg"
-      alt="리액트 로고"
-      width={size}
-      height={size}
+      src={props.src}
+      alt={props.alt}
+      width={props.width}
+      height={props.height}
+      loading="lazy"
     />
   )
 }
+
+export default Image

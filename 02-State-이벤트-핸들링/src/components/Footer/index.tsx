@@ -1,9 +1,13 @@
+import Wrapper from '../Wrapper'
 import S from './style.module.css'
 
+// 컴포넌트 Props(반드시 객체) 인터페이스(약속) 선언
 interface FooterProps {
   slogan: string
 }
 
+// 타입스크립트 = 타입 시스템과 함께 사용할 수 있는 자바스크립트
+// export default function 함수_컴포넌트_이름(속성_매개변수: 타입) {
 export default function Footer(props: FooterProps) {
   /**
    * Props로 데이터 전달(부모 → 자식)
@@ -33,10 +37,19 @@ export default function Footer(props: FooterProps) {
 
   return (
     <footer className={S.footer}>
-      <small aria-label={copyrightLabel}>
-        {currentYear} COPYRIGHT RESERVED. © <abbr title="이듬(EUID)">EUID</abbr>
-        . {props.slogan}
-      </small>
+      <Wrapper>
+        <small aria-label={copyrightLabel}>
+          {currentYear} COPYRIGHT RESERVED. ©{' '}
+          <abbr title="이듬(EUID)">EUID</abbr>. {props.slogan}
+        </small>
+      </Wrapper>
     </footer>
   )
 }
+
+function look(what?: string) {
+  return `${what ?? '백두산'}을 보다`
+}
+
+look() // '백두산을 보다'
+look('한라산') // '한라산을 보다'
