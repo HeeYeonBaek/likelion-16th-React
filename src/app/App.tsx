@@ -1,7 +1,10 @@
 
-import Header from '../components/header/Header'
-import Main from '../components/main/Main'
-import Footer from '../components/footer/Footer'
+// import Header from '../components/header/Header'
+// import Main from '../components/main/Main'
+// import Footer from '../components/footer/Footer'
+
+import JsxExpression from '../jsx-expression/JsxExpression'
+
 // console.log(Button) // React 함수형 컴포넌트(Functional Component)
 
 // console.log(styles) // CSS Modules 기술을 사용해 내보내진 JS 객체
@@ -24,9 +27,11 @@ export default function App() {
   // JSX는 문(statement)이다? ❌ 값(expression, value)이다? ⭕️
   return (
     <>
-    <Header/>
+    {/* <Header/>
     <Main/>
-    <Footer/>
+    <Footer/> */}
+      
+    <JsxExpression/>
     </>
   )
 }
