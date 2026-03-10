@@ -37,6 +37,12 @@
     }
   }
 
+  .errorMessage {
+    color: #f00;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
   .button {
     background-color: hsla(0, 0%, 7%, 0.85);
     color: #fff;
@@ -46,7 +52,7 @@
       background-color: hsla(0, 0%, 7%, 1);
     }
   }
-  
+
   .preview {
     margin-top: 1rem;
     padding: 1rem;
