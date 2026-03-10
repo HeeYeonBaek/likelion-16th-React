@@ -1,5 +1,5 @@
 import { Footer, Header, Image, Wrapper } from '@/components'
-import { EventHandling } from '@/learns'
+import { ComponentState, EventHandling } from '@/learns'
 import S from './style.module.css'
 
 export default function App() {
@@ -12,9 +12,9 @@ export default function App() {
         </h2>
       </Header>
 
-      <div data-placeholder>
+      <div className={S.main}>
         <Wrapper>
-          {/* <ComponentState /> */}
+          <ComponentState />
           <EventHandling />
         </Wrapper>
       </div>
